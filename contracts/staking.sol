@@ -51,19 +51,26 @@ contract Staking {
     }
 
     function safeWithdrawal() external {
-        
+        uint userStake = stakes[msg.sender].amount;
+        require(userStake > 0, "Insufficient Balance");
+        require(IERC20(kejiToken).balanceOf(address(this)) > userStake, "Insufficient Balance");
+        stakes[msg.sender].amount = 0;
+        IERC20(kejiToken).transfer(msg.sender, userStake);
+
     }
 
-    function stakingCommission() public  {
+    
+
+    function stakingCommission() public view {
         Info memory stakingData = stakes[msg.sender];
         uint balance = stakingData.amount;
         require(balance > 0, "Insufficient Balance");
         require(IERC20(kejiToken).balanceOf(address(this)) >= balance, "Insufficient Balance");
         uint lockedTime = block.timestamp - stakingData.noOfdays;
         uint cumulativeProfit = ((balance / 42000000) * lockedTime);
-        uint withdrawal = cumulativeProfit + balance;
+        cumulativeProfit + balance;
         stakingData.amount = 0;
-        IERC20(kejiToken).transfer(msg.sender, withdrawal);
+        // IERC20(kejiToken).transfer(msg.sender, withdrawal);
 
     }
 }
