@@ -21,7 +21,9 @@ Steps to Interact with the contract
 
 Interacting with the smart contract.
 <hr>
+
 ## deploy.ts 
+<hr>
 1. Deploy your smart contract using the necessary ethers.js scripts <hr>
 2. To make the deploying complete, get a Bored Ape NFT holder on Mainnet <hr>
 3. Impersonate the Bored Ape Account.
