@@ -11,10 +11,10 @@ The functions are specifically divided into stake, withdraw and specific withdra
 
 Steps to Interact with the contract 
 <hr>
-1. Create an ERC20 token.
-2. Get a bored ape holder from the mainet.
-3. Fork the mainnet localhost using the command line below.
+1. Create an ERC20 token. <hr>
+2. Get a bored ape holder from the mainet. <hr>
+3. Fork the mainnet localhost using the command line below. <hr>
 
-npx hardhat node --fork https://eth-mainnet.alchemyapi.io/v2/<key>
+ ## npx hardhat node --fork https://eth-mainnet.alchemyapi.io/v2/<key> 
 
 <hr>
