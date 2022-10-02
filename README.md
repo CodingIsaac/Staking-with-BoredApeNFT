@@ -15,6 +15,21 @@ Steps to Interact with the contract
 2. Get a bored ape holder from the mainet. <hr>
 3. Fork the mainnet localhost using the command line below. <hr>
 
- ## npx hardhat node --fork https://eth-mainnet.alchemyapi.io/v2/<key> 
+ ### npx hardhat node --fork https://eth-mainnet.alchemyapi.io/v2/<key> 
 
 <hr>
+
+Interacting with the smart contract.
+<hr>
+## deploy.ts 
+1. Deploy your smart contract using the necessary ethers.js scripts <hr>
+2. To make the deploying complete, get a Bored Ape NFT holder on Mainnet <hr>
+3. Impersonate the Bored Ape Account.
+4. You can equally check the balance of the smart contract. <hr>
+
+## staking.ts
+
+Freely deploy the staking smart contract. 
+<hr>
+
+Bear in mind that all of these interactions is done on local network.
